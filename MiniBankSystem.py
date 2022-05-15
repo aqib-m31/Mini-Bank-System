@@ -296,7 +296,7 @@ for i in "...":
 time.sleep(0.5)
 print()
 try:
-    AdmissionSystem = BankSystem("localhost",username,password, "bank")
+    BankSys = BankSystem("localhost",username,password, "bank")
     print("Successfully Connected!")
     while 1:
         print("="*10 + " Welcome to Mini Bank " + "="*10)
@@ -304,18 +304,18 @@ try:
             print("1. Sign in\n2. Create an account\n3. Exit")
             ch = int(input("Enter your choice: "))
             if ch == 1:
-                AdmissionSystem.sign_in()
+                BankSys.sign_in()
             elif ch == 2:
-                AdmissionSystem.sign_up()
+                BankSys.sign_up()
             elif ch == 3:
-                AdmissionSystem.close_connection()
+                BankSys.close_connection()
                 break
             else:
                 print("Invalid choice.")
-                AdmissionSystem.go_back()
+                BankSys.go_back()
         except:
             print("Invalid value.")
-            AdmissionSystem.go_back()
+            BankSys.go_back()
     print("Thanks for using this program.")
     close = input("Press ENTER ")
 except:
